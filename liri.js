@@ -55,7 +55,7 @@ switch (command) {
         });
         break
     case 'HELP':
-        console.log('Here a list of commands I can take:');
+        console.log('What wonderful things we can accomplish:');
         console.log("1. 'my-tweets'");
         console.log("2. 'spotify-this-song' '<Song Name Here>' ");
         console.log("3.  'movie-this' '<Movie Name Here>' ");
@@ -64,7 +64,7 @@ switch (command) {
 
 
     default:
-        console.log("Enter 'HELP' to learn more about my features");
+        console.log("Type 'HELP' to put the lotion on its skin, or else it gets hose again");
         break;
 }
 
@@ -78,7 +78,7 @@ function spotifyRequest(songSearch) {
             console.log('Link: ' + data.tracks.items[0].external_urls.spotify);
             console.log('Album: ' + data.tracks.items[0].album.name);
         } else {
-            console.log("Somthing went wrong: " + err);
+            console.log("Uh-oh: " + err);
         };
     });
 
@@ -91,7 +91,7 @@ function omdbRequest(queryUrl) {
             console.log("Title: " + JSON.parse(body).Title);
             console.log("Released: " + JSON.parse(body).Year);
             console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
-            console.log("The movie's was produced in : " + JSON.parse(body).Country);
+            console.log("Release Date: " + JSON.parse(body).Country);
             console.log("Language: " + JSON.parse(body).Language);
             console.log("Plot:  " + JSON.parse(body).Plot);
             console.log("Actors: " + JSON.parse(body).Actors);
